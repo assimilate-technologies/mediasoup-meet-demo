@@ -6,6 +6,31 @@ Try it online at https://v3demo.mediasoup.org
 
 https://github.com/daily-co/mediasoup-sandbox/tree/main/single-page
 
+## Running on AWS EC2 instances
+
+1. Make sure that your instance security group allows inbound TCP to
+   port 3000, inbound UDP to ports 40000-49999, and all outbound traffic.
+
+2. On AWS Linux you'll need to install a newer version of g++ than is
+   included in the Development Tools package group.
+
+```
+# from-scratch install on AWS Linux
+
+sudo yum install git
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install 11
+sudo yum groupinstall "Development Tools"
+sudo yum install gcc72-c++
+git clone https://github.com/daily-co/mediasoup-sandbox.git
+cd mediasoup-sandbox/
+npm install
+```
+
+3. Make a `listenIps` entry with `ip` set to the instance's private IP
+   address, and `announcedIp` set to the instance's public IPv4 address.
+
 ## Resources
 
 * mediasoup website and documentation: [mediasoup.org](https://mediasoup.org)
