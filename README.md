@@ -4,6 +4,7 @@ A demo application of [mediasoup](https://mediasoup.org) **v3**.
 
 Try it online at https://v3demo.mediasoup.org
 
+https://github.com/daily-co/mediasoup-sandbox/tree/main/single-page
 
 ## Resources
 
