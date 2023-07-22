@@ -8,7 +8,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint -c .eslintrc.js server.js lib connect.js",
-    "start": "DEBUG=${DEBUG:='*mediasoup* *INFO* *WARN* *ERROR*'} INTERACTIVE=${INTERACTIVE:='true'} node server.js",
+    "start": "DEBUG=${DEBUG:='*mediasoup* *INFO* *WARN* *ERROR*'} INTERACTIVE=${INTERACTIVE:='true'} MEDIASOUP_LISTEN_IP=172.31.11.41 MEDIASOUP_ANNOUNCED_IP=43.204.217.189 node server.js",
     "connect": "node connect.js"
   },
   "dependencies": {
